@@ -1,0 +1,52 @@
+/* Dashboard Page Styles */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #60ae62; /* Background color */
+    color: #fff; /* Text color */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .dashboard-title {
+    font-size: 2rem; /* Smaller font size for mobile */
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-text {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    margin-bottom: 20px;
+  }
+  
+  .logout-button {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #dc3545; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #c82333; /* Darker shade for hover */
+  }
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .dashboard-title {
+      font-size: 1.8rem; /* Adjust title size for smaller screens */
+    }
+  
+    .dashboard-text {
+      font-size: 1rem; /* Adjust text size for smaller screens */
+    }
+  
+    .logout-button {
+      font-size: 0.9rem; /* Adjust button text size for smaller screens */
+    }
+  }

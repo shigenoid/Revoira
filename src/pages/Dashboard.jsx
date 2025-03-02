@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../App.css';
+import './css/Dashboard.css'; // Import the Dashboard Page styles
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -13,10 +13,10 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="container">
-      <h1 className="title">Dashboard</h1>
-      <p className="text">Welcome to your dashboard!</p>
-      <button onClick={handleLogout} className="button logout">
+    <div className="dashboard-container">
+      <h1 className="dashboard-title">Dashboard</h1>
+      <p className="dashboard-text">Welcome to your dashboard!</p>
+      <button onClick={handleLogout} className="logout-button">
         Logout
       </button>
     </div>
