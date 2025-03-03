@@ -23,21 +23,48 @@
     color: #fff; /* Text color */
     font-size: 0.9rem;
     padding: 5px;
-    font-family: 'samsung-light', 'Poppins', serif;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+  
+.nav-item.active .nav-icon,
+.nav-item.active .nav-text {
+    opacity: 1; /* Active button content opacity */
+    font-weight: bold; /* Active button content weight */
+    transform: scale(1.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
   
 .nav-item.connect-item {
-    margin-top: -40px; /* Elevate the Connect button */
+    margin-top: -30px; /* Elevate the Connect button */
     background-color: #57723a; /* Match navbar background */
     border-radius: 30px;
     padding: 15px;
-    border-bottom: 2px solid #4AB847;
+    border-bottom: 1px solid #64FF60;
+    opacity: 1;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.nav-item.connect-item.active {
+    margin-top: -50px;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
   
 .nav-icon {
     font-size: 1.5rem;
+    opacity: 0.5; /* Inactive icon opacity */
+    transition: all 0.3s ease;
+    transform: scale(1);
 }
   
 .nav-text {
     font-size: 0.8rem;
+    opacity: 0.5; /* Inactive text opacity */
+    transition: all 0.3s ease;
+    font-family: 'samsung-light', 'Poppins', serif;
+    transform: scale(1);
 }
