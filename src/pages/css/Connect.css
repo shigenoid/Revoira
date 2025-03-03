@@ -1,0 +1,16 @@
+/* Connect Page Styles */
+.connect-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Prevent scrolling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Ensure the QR scanner takes up the full viewport */
+  #qr-scanner {
+    width: 100% !important;
+    height: 100% !important;
+  }
