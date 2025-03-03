@@ -25,7 +25,7 @@ const Login = () => {
       {/* Header Section */}
       <div className="login-header">
         <h1 className="logo">
-          <img src="/img/logo.svg" alt="Revoira"/>
+          <img src="/icons/logo.svg" alt="Revoira"/>
         </h1>
         <h2 className="welcome-text">Welcome Back!</h2>
         <p className="caption">Enter your username & password</p>
