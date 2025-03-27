@@ -1,0 +1,185 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'samsung-medium', 'Poppins', sans-serif;
+    background-color: #60ae62; /* Background color */
+    color: #fff; /* Text color */
+    padding: 25px 25px 0px 25px;
+  }
+  
+label, .welcome-text, .signin-button {
+  font-family: 'samsung-bold', 'Poppins', sans-serif;
+}
+  /* Login Container */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  /* Header Section */
+  .login-header {
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    font-size: 5rem; /* Smaller font size for mobile */
+    margin-bottom: 25px;
+  }
+  .logo img {
+    width: 350px;
+    height: auto;
+  }
+  
+  .welcome-text {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  
+  .caption {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    color: rgba(255, 255, 255, 0.8);
+  }
+ 
+  /* Input Section */
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px; /* Smaller margin for mobile */
+    width: 100%;
+  }
+  
+  .input-group label {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border: 1px solid #FFFFFF;
+    background-color: #ffffff00;
+    color: white;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+  .input-field::placeholder {
+    color: rgba(255, 255, 255, 0.712);
+    font-family: 'samsung-light', 'Poppins', sans-serif;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    transition: ease-in 0.2s;
+  }
+  
+  .input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-container .input-field {
+    width: 100%;
+    padding-right: 40px; 
+  }
+
+  .eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* Sign In Button */
+  .signin-button {
+    width: 45%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #57723a; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .signin-button:hover {
+    background-color: #475d2f; /* Darker shade for hover */
+    transition: ease-in 0.2s;
+  }
+  
+  /* Registration Link */
+  .register-text {
+    font-size: 0.9rem; /* Smaller font size for mobile */
+    margin-top: 15px; /* Smaller margin for mobile */
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .register-link {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .register-link:hover {
+    color: #ddd;
+    transition: ease-in 0.2s;
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 15px; 
+    }
+  
+    .logo {
+      font-size: 3rem;
+
+    }
+    .logo img {
+      width: 175px;
+    }
+  
+    .welcome-text {
+      font-size: 2.3rem;
+      margin-bottom: 0px;
+    }
+  
+    .caption {
+      font-size: 1rem;
+    }
+  
+    .input-group label {
+      font-size: 1rem; 
+    }
+  
+    .input-field {
+      font-size: 0.9rem;
+    }
+  
+    .signin-button {
+      font-size: 0.9rem; 
+    }
+  
+    .register-text {
+      font-size: 0.8rem;
+    }
+  }
+

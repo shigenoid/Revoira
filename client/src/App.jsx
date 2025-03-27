@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Connect from './pages/Connect';
 import User from './pages/User';
+import Register  from './pages/Register';
 import './App.css';
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/home" element={<Home />} />
         <Route path="/connect" element={<Connect />} />
