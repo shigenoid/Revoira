@@ -4,14 +4,14 @@ import './css/Login.css'; // Import the Login Page styles
 import axios from 'axios'
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
   e.preventDefault();  // Prevent default form submission
   
-  axios.post('http://localhost:3002/login', { username, password })
+  axios.post('http://localhost:3002/login', { email, password })
     .then(res => {
       console.log(res);
       
@@ -40,20 +40,20 @@ const Login = () => {
           <img src="/icons/logo.svg" alt="Revoira"/>
         </h1>
         <h2 className="welcome-text">Welcome Back!</h2>
-        <p className="caption">Enter your username & password</p>
+        <p className="caption">Salamalekomalekomsalam</p>
       </div>
 
       {/* Input Section */}
       <form onSubmit={handleLogin} className="login-form">
         <div className="input-group">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Email</label>
           <input
             type="text"
             id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="input-field"
-            placeholder="John Doe"
+            placeholder="Enter your email"
           />
         </div>
         <div className="input-group">

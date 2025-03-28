@@ -14,8 +14,28 @@ const Register = () => {
 
   const navigate = useNavigate();
 
-  const handleRegister = (e) => {
-    navigate('/register');
+  const createUser = (e) => {
+    e.preventDefault(); 
+  
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+  
+    axios.post('http://localhost:3002/register', {
+      Email: email,
+      UserName: username,
+      Password: password
+    }).then(() => {
+      alert('Account created successfully!');
+      navigate('/login');
+    }).catch((error) => {
+      alert(error.response?.data?.message || 'Registration failed');
+    });
+  };
+
+  const handleLogin = () => {
+    navigate('/login');
   };
 
   return (
@@ -27,7 +47,7 @@ const Register = () => {
       </div>
 
       {/* Input Section */}
-      <form onSubmit={handleRegister} className="login-form">
+      <form onSubmit={createUser} className="login-form">
         <div className="input-group">
           <label htmlFor="username">Username*</label>
           <input
@@ -98,6 +118,12 @@ const Register = () => {
           Register
         </button>
       </form>
+
+      <p className="register-text">
+        <span onClick={handleLogin} className="register-link">
+          Already have an account?
+        </span>
+      </p>
     </div>
   );
 };

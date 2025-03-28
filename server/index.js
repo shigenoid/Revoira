@@ -19,8 +19,8 @@ const db = mysql.createConnection({
 })
 
 app.post('/login', (req, res) => {
-    const sql = "SELECT * FROM users WHERE BINARY username = ? AND BINARY password = ?"
-    db.query(sql, [req.body.username, req.body.password], (err, data) => {
+    const sql = "SELECT * FROM users WHERE BINARY email = ? AND BINARY password = ?"
+    db.query(sql, [req.body.email, req.body.password], (err, data) => {
         if (err) {
             return res.status(500).json({ success: false, message: "Login Failed" });
         }
@@ -31,3 +31,43 @@ app.post('/login', (req, res) => {
         }
     });
 })
+
+app.post('/register', (req, res) => {
+    const sentEmail = req.body.Email;
+    const sentUserName = req.body.UserName;
+    const sentPassword = req.body.Password;
+  
+    // Changed to check email instead of username
+    const checkUserSql = "SELECT * FROM users WHERE email = ?"; // Changed from username to email
+    db.query(checkUserSql, [sentEmail], (err, results) => { // Changed parameter to sentEmail
+      if (err) {
+        return res.status(500).json({ 
+          success: false, 
+          message: "Database error" 
+        });
+      }
+      
+      if (results.length > 0) {
+        return res.status(409).json({ 
+          success: false, 
+          message: "Email already exists" 
+        });
+      }
+  
+      const insertSql = "INSERT INTO users (email, username, password) VALUES (?, ?, ?)";
+      const values = [sentEmail, sentUserName, sentPassword];
+      
+      db.query(insertSql, values, (err, results) => {
+        if (err) {
+            return res.status(500).json({ 
+              success: false, 
+              message: "Error creating an account" 
+            });
+          }
+          return res.status(201).json({ 
+            success: true, 
+            message: "Account created successfully" 
+        });
+      });
+    });
+});
