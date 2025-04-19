@@ -1,0 +1,6 @@
+[submodule "Revoira App (React Native)"]
+	path = Revoira App (React Native)
+	url = https://github.com/shigenoid/revoira-native
+[submodule "Streamlit App"]
+	path = Streamlit App
+	url = https://github.com/shigenoid/rev-streamlit
