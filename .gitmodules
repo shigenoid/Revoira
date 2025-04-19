@@ -4,3 +4,6 @@
 [submodule "Streamlit App"]
 	path = Streamlit App
 	url = https://github.com/shigenoid/rev-streamlit
+[submodule "AI Codes (YOLO)"]
+	path = AI Codes (YOLO)
+	url = https://github.com/shigenoid/revoira-yolo
